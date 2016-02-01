@@ -1,0 +1,13 @@
+This creation step cannot be automated, at least that's my current thinking.
+The first step is to create the meteor app using the command:
+
+meteor create simple-todos
+
+This is done within the todo server and because of file sharing, it will be
+created in the correct directory.
+In the Vagrantfile, add the following entry:
+
+config.vm.synced_folder "./", "/developer"
+
+Then when the VM is running, change to the /developer directory and issue the
+above meteor create command.
